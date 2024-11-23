@@ -233,9 +233,10 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        # This is the function which show the raw data.
+        # Show the raw data
         display_raw_data(df)
 
+        # If there is no data, show the message that is no matching data
         if len(df) == 0:
             print("The condition you specified has no matching data.")
         else:
@@ -244,6 +245,7 @@ def main():
             trip_duration_stats(df)
             user_stats(df)
 
+        # Restart Code
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
