@@ -233,6 +233,7 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
+        # This is the function which show the raw data.
         display_raw_data(df)
 
         if len(df) == 0:
